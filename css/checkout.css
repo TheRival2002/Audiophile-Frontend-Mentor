@@ -1,0 +1,344 @@
+@import "./style.css";
+@import "./product.css";
+
+/* General Styling */
+
+body {
+  background-color: var(--clr-neutral-300);
+}
+
+.checkout-form {
+  display: grid;
+  gap: 2rem;
+}
+
+.checkout-form > * {
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.5em;
+  padding: 2.5rem 1.5rem 0.5rem;
+}
+
+.checkout-title {
+  font-size: var(--fs-600);
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+}
+
+@media (min-width: 40em) {
+  .checkout-title {
+    font-size: var(--fs-700);
+  }
+}
+
+@media (min-width: 60em) {
+  .checkout-form {
+    grid-template-columns: 2fr 1fr;
+  }
+  .summary {
+    height: fit-content;
+  }
+}
+
+.checkout-section {
+  font-weight: var(--fw-700);
+  font-size: var(--fs-200);
+  color: var(--clr-primary-400);
+  text-transform: uppercase;
+}
+
+label {
+  font-weight: var(--fw-700);
+  color: var(--clr-neutral-900);
+  font-size: 12px;
+  display: block;
+  padding-bottom: 0.625rem;
+}
+
+input {
+  width: 100%;
+  height: 3.5rem;
+  border: 1px solid hsl(0 0% 30% / 0.2);
+  border-radius: 0.75em;
+  text-indent: 1rem;
+}
+
+.full-product-showoff > input:first-of-type {
+  text-indent: 0;
+}
+
+input[type="radio"] {
+  width: fit-content;
+}
+
+.payment-method > * {
+  border: 1px solid hsl(0 0% 30% / 0.2);
+  border-radius: 0.75em;
+  padding-left: 1rem;
+}
+
+@media (min-width: 40em) {
+  .payment-method > * {
+    margin-left: 3rem;
+  }
+}
+
+.summary {
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.5em;
+  padding: 2.5rem 1.5rem 2rem;
+}
+
+.summary-title {
+  font-weight: var(--fw-700);
+  font-size: var(--fs-400);
+  color: var(--clr-neutral-900);
+  text-transform: uppercase;
+}
+
+.summary h4,
+.summary h5 {
+  color: var(--clr-neutral-900);
+}
+
+.summary h4 {
+  font-size: var(--fs-400);
+}
+
+.summary h5 {
+  font-size: var(--fs-300);
+}
+
+.summary p {
+  color: var(--clr-neutral-950);
+  font-size: var(--fs-200);
+  font-weight: var(--fw-700);
+}
+
+.summary .total-declaration {
+  font-weight: var(--fw-500);
+  font-size: var(--fs-300);
+}
+
+.return-link {
+  width: fit-content;
+  margin-bottom: 1rem;
+}
+
+/* Layout Styling */
+
+.checkout-title,
+.summary-title {
+  padding-bottom: 2rem;
+}
+
+.checkout-section {
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 40em) {
+  .checkout-title,
+  .summary-title {
+    padding-bottom: 2.5rem;
+  }
+}
+
+.billing-details,
+.shipping-info,
+.payment-details {
+  padding-bottom: 2rem;
+}
+
+.form-container .payment-details-grid .visual-contain > :last-child {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  padding-block: 1.25rem;
+}
+
+@media (min-width: 40em) {
+  .billing-details,
+  .shipping-info,
+  .payment-details {
+    padding-bottom: 3.5rem;
+  }
+  .billing-details {
+    display: grid;
+    grid-template-areas:
+      "name email"
+      "number ...";
+    column-gap: 1rem;
+  }
+  .shipping-info {
+    display: grid;
+    grid-template-areas:
+      "address address"
+      "visual visual"
+      "country .......";
+    column-gap: 1rem;
+  }
+  .shipping-info > :first-child {
+    grid-area: address;
+  }
+  .shipping-info > :last-child {
+    grid-area: country;
+  }
+  .form-container .shipping-info .visual-contain {
+    grid-area: visual;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    padding-bottom: 0rem;
+  }
+  .payment-details-grid {
+    display: grid;
+    grid-template-areas:
+      "label payment"
+      "visual visual";
+    column-gap: 1rem;
+  }
+  .form-container .payment-details-grid .visual-contain {
+    grid-area: visual;
+    display: grid;
+    grid-template-areas:
+      "numb pin"
+      "cash cash";
+    column-gap: 1rem;
+    padding-bottom: 0rem;
+  }
+  .form-container .payment-details-grid .visual-contain > :last-child {
+    grid-area: cash;
+  }
+}
+
+.billing-details > div:not(:last-child),
+.shipping-info > div:not(:last-child),
+.payment-details > div:not(:last-child) {
+  padding-bottom: 1.5rem;
+}
+
+.visual-contain > div:not(:last-child) {
+  padding-bottom: 1.5rem;
+}
+
+.payment-method label {
+  display: inline;
+  padding-bottom: 0;
+}
+
+.payment-method > * {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.payment-method > div:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.payment-method > div:not(:first-child) {
+  margin-bottom: 1.5rem;
+}
+
+.cart-items {
+  margin-bottom: 2rem;
+}
+
+.cart-item:not(:first-of-type) {
+  margin-top: 1.5rem;
+}
+
+.total-declaration {
+  margin-bottom: 0.75rem;
+}
+
+.total-grand-declaration {
+  margin-top: 1rem;
+}
+
+/* Summary Layout */
+
+.summary > div:not(:first-of-type) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-item-info {
+  width: 100%;
+  justify-self: start;
+  margin-left: 1rem;
+}
+
+.see-product {
+  margin-top: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Styling the form */
+
+.radio-color > input {
+  cursor: pointer;
+}
+
+.form-group:has(:focus) input {
+  outline: 2px solid var(--clr-primary-400);
+}
+
+.form-group:has(:focus:invalid) input {
+  outline: 2px solid var(--clr-primary-500);
+}
+
+.form-group:has(:focus:invalid) label {
+  color: var(--clr-primary-500);
+}
+
+.form-group:has(:focus).radio-color {
+  border: 1px solid var(--clr-primary-400);
+}
+
+.form-group:has(:focus).radio-color > input {
+  outline: 0;
+}
+
+.form-group:has(:valid) label {
+  color: var(--clr-primary-600);
+}
+
+.form-group:has(:valid) input {
+  outline-color: var(--clr-primary-600);
+}
+
+.form-group:has(:valid) input {
+  border-color: var(--clr-primary-600);
+}
+
+.form-group:has(:valid).radio-color label {
+  color: var(--clr-neutral-900);
+}
+
+.real .form-group input {
+  border-color: hsl(0 0% 30% / 0.2);
+}
+
+.real .form-group input {
+  outline-color: var(--clr-primary-400);
+}
+
+.real .form-group label {
+  color: var(--clr-neutral-900);
+}
+
+.real .form-group:has(:invalid) input {
+  border-color: var(--clr-primary-500);
+}
+
+.real .form-group:has(:invalid) input {
+  outline-color: var(--clr-primary-500);
+}
+
+.real .form-group:has(:invalid) label {
+  color: var(--clr-primary-500);
+}

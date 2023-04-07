@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/product-collection.css">
+
+  <title>Frontend Mentor | Audiophile e-commerce website</title>
+</head>
+
+<body>
+  <!-- wrapper for header and page title -->
+  <div class="mb-sm bg-neutral-900">
+    <div class="container">
+
+      <!-- header section -->
+      <header class="primary-header | text-neutral-100 fs-200 fw-700 uppercase">
+        <a class="logo" href="./index.html">
+          <img src="./assets/shared/desktop/logo.svg" alt="website logo">
+        </a>
+        <div class="header-nav">
+          <button class="mobile-nav" aria-controls="primary-nav-small" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+          </button>
+          <!-- navigation for big screens -->
+          <nav class="primary-nav-large">
+            <ul class="nav-appearance">
+              <li><a href="./index.html">home</a></li>
+              <li><a href="./headphones.html">headphones</a></li>
+              <li><a href="./speakers.html">speakers</a></li>
+              <li><a href="./earphones.html">earphones</a></li>
+            </ul>
+          </nav>
+          <!-- end of navigation for big screens -->
+          <!-- navigation for tablets and mobiles -->
+          <nav class="primary-nav-small product-collection">
+            <div class="headphones">
+              <p class="product-collection-name">headphones</p>
+              <a href="./headphones.html" class="shop-link">shop <img class="arrow-right"
+                  src="./assets/shared/desktop/icon-arrow-right.svg" alt=""></a>
+            </div>
+
+            <div class="speakers">
+              <p class="product-collection-name">speakers</p>
+              <a href="./speakers.html" class="shop-link">shop <img class="arrow-right"
+                  src="./assets/shared/desktop/icon-arrow-right.svg" alt=""></a>
+            </div>
+
+            <div class="earphones">
+              <p class="product-collection-name">earphones</p>
+              <a href="./earphones.html" class="shop-link">shop <img class="arrow-right"
+                  src="./assets/shared/desktop/icon-arrow-right.svg" alt=""> </a>
+            </div>
+          </nav>
+          <!-- end of navigation for tablets and mobiles -->
+        </div>
+        <div class="shopping-cart-container">
+          <button class="shopping-cart-btn" aria-controls="shopping-cart">
+            <img src="./assets/shared/desktop/icon-cart.svg" alt="shopping cart">
+          </button>
+          <div class="shopping-cart">
+            <div>
+              <h4>CART (<span class="cart-counter">0</span>)</h4>
+              <button class="remove-all">Remove all</button>
+            </div>
+            <div class="cart-items">
+
+            </div>
+            <div>
+              <p>TOTAL</p>
+              <h4>$ <span class="total-price">0</span></h4>
+            </div>
+            <div>
+              <a href="./checkout.html" class="see-product">checkout</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end of header section -->
+
+      <!-- section under the header -->
+      <section>
+        <h2 class="collection-sub-header">speakers</h2>
+      </section>
+      <!-- end of section under the header -->
+    </div>
+  </div>
+  <!-- end of wrapper for header and page title -->
+
+  <main class="container">
+    <!-- first section -->
+    <section class="product-item | mb-med">
+      <picture>
+        <source srcset="./assets/product-zx9-speaker/desktop/image-category-page-preview.jpg" media="(min-width: 60em)">
+        <source srcset="./assets/product-zx9-speaker/tablet/image-category-page-preview.jpg" media="(min-width: 40em)">
+        <img class="product-img" src="./assets/product-zx9-speaker/mobile/image-category-page-preview.jpg"
+          alt="big and strong speaker">
+      </picture>
+      <div class="product-info">
+        <p class="product-announcement | mb-item-first-part">new product</p>
+        <h3 class="collection-sub-header | mb-item-second-part">ZX9 speaker</h3>
+        <p class="mb-item-third-part">Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf
+          speaker
+          system that offers truly wireless connectivity -- creating new possibilities for more
+          pleasing and practical audio setups.</p>
+        <a href="./product-zx9-speaker.html" type="button" class="see-product">see
+          product</a>
+      </div>
+    </section>
+    <!-- end of first section -->
+
+    <!-- second section -->
+    <section class="product-item | mb-med">
+      <picture>
+        <source srcset="./assets/product-zx7-speaker/desktop/image-category-page-preview.jpg" media="(min-width: 60em)">
+        <source srcset="./assets/product-zx7-speaker/tablet/image-category-page-preview.jpg" media="(min-width: 40em)">
+        <img class="product-img" src="./assets/product-zx7-speaker/mobile/image-category-page-preview.jpg"
+          alt="big black speaker">
+      </picture>
+      <div class="product-info">
+        <h3 class="collection-sub-header | mb-item-second-part">ZX7 speaker</h3>
+        <p class="mb-item-third-part">Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker
+          uses
+          high-end audiophile components that represents the top of the line powered speakers for
+          home or studio use.</p>
+        <a href="./product-zx7-speaker.html" type="button" class="see-product">see
+          product</a>
+      </div>
+    </section>
+    <!-- end of second section -->
+
+    <!-- third section -->
+    <section class="product-collection | mb-med">
+      <div class="headphones">
+        <p class="product-collection-name">headphones</p>
+        <a href="./headphones.html" class="shop-link">shop <img class="arrow-right"
+            src="./assets/shared/desktop/icon-arrow-right.svg" alt=""></a>
+      </div>
+
+      <div class="speakers">
+        <p class="product-collection-name">speakers</p>
+        <a href="./speakers.html" class="shop-link">shop <img class="arrow-right"
+            src="./assets/shared/desktop/icon-arrow-right.svg" alt=""></a>
+      </div>
+
+      <div class="earphones">
+        <p class="product-collection-name">earphones</p>
+        <a href="./earphones.html" class="shop-link">shop <img class="arrow-right"
+            src="./assets/shared/desktop/icon-arrow-right.svg" alt=""> </a>
+      </div>
+    </section>
+    <!-- end of third section -->
+
+    <!-- fourth section -->
+    <section class="product-description | mb-med">
+      <div>
+        <p class="description-title">Bringing you the <span>best</span> audio gear</p>
+        <p>Located at the heart of New York City, Audiophile is the premier store for high end headphones,
+          earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration
+          rooms available for you to browse and experience a wide range of our products. Stop by our store
+          to meet some of the fantastic people who make Audiophile the best place to buy your portable
+          audio equipment.</p>
+      </div>
+      <picture>
+        <source srcset="./assets/shared/desktop/image-best-gear.jpg" media="(min-width: 60em)">
+        <source srcset="./assets/shared/tablet/image-best-gear.jpg" media="(min-width: 40em)">
+        <img class="description-img" src="./assets/shared/mobile/image-best-gear.jpg" alt="man with headphones on head">
+      </picture>
+    </section>
+    <!-- end of fourth section -->
+
+  </main>
+
+
+  <!-- footer -->
+  <footer class="bg-neutral-800 text-neutral-150">
+    <div class="primary-footer | container">
+      <div class="footer-nav | uppercase">
+        <a class="logo" href="./index.html">
+          <img src="./assets/shared/desktop/logo.svg" alt="website logo">
+        </a>
+        <nav class="primary-nav | fs-200 fw-700 uppercase">
+          <ul class="nav-appearance">
+            <li><a href="./index.html">home</a></li>
+            <li><a href="./headphones.html">headphones</a></li>
+            <li><a href="./speakers.html">speakers</a></li>
+            <li><a href="./earphones.html">earphones</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <p>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers
+          and sound specialists who are devoted to helping you get the most out of personal audio. Come and
+          visit our demo facility - we’re open 7 days a week.</p>
+        <p>Copyright 2021. All Rights Reserved</p>
+      </div>
+      <nav class="secondary-nav">
+        <ul class="nav-appearance">
+          <li><a href="https://hr-hr.facebook.com" target="_blank">
+              <img src="./assets/shared/desktop/icon-facebook.svg" alt="">
+            </a></li>
+          <li><a href="https://twitter.com" target="_blank">
+              <img src="./assets/shared/desktop/icon-twitter.svg" alt="">
+            </a></li>
+          <li><a href="https://www.instagram.com" target="_blank">
+              <img src="./assets/shared/desktop/icon-instagram.svg" alt="">
+            </a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <!-- end of footer -->
+
+  <script src="./js/main.js"></script>
+  <script src="./js/counter.js"></script>
+</body>
+
+</html>

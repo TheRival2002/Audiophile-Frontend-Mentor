@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/checkout.css">
+
+  <title>Frontend Mentor | Audiophile e-commerce website</title>
+</head>
+
+<body>
+  <!-- wrapper for header -->
+  <div class="mb-xsm bg-neutral-900">
+    <div class="container">
+
+      <!-- header section -->
+      <header class="primary-header | text-neutral-100 fs-200 fw-700 uppercase">
+        <a class="logo" href="./index.html">
+          <img src="./assets/shared/desktop/logo.svg" alt="website logo">
+        </a>
+        <div class="header-nav">
+          <button class="mobile-nav" aria-controls="primary-nav-small" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+          </button>
+          <!-- navigation for big screens -->
+          <nav class="primary-nav-large">
+            <ul class="nav-appearance">
+              <li><a href="./index.html">home</a></li>
+              <li><a href="./headphones.html">headphones</a></li>
+              <li><a href="./speakers.html">speakers</a></li>
+              <li><a href="./earphones.html">earphones</a></li>
+            </ul>
+          </nav>
+          <!-- end of navigation for big screens -->
+          <!-- navigation for tablets and mobiles -->
+          <nav class="primary-nav-small product-collection">
+            <div class="headphones">
+              <p class="product-collection-name">headphones</p>
+              <a href="./headphones.html" class="shop-link">shop <img class="arrow-right"
+                  src="./assets/shared/desktop/icon-arrow-right.svg" alt=""></a>
+            </div>
+
+            <div class="speakers">
+              <p class="product-collection-name">speakers</p>
+              <a href="./speakers.html" class="shop-link">shop <img class="arrow-right"
+                  src="./assets/shared/desktop/icon-arrow-right.svg" alt=""></a>
+            </div>
+
+            <div class="earphones">
+              <p class="product-collection-name">earphones</p>
+              <a href="./earphones.html" class="shop-link">shop <img class="arrow-right"
+                  src="./assets/shared/desktop/icon-arrow-right.svg" alt=""> </a>
+            </div>
+          </nav>
+          <!-- end of navigation for tablets and mobiles -->
+        </div>
+        <div class="shopping-cart-container">
+          <button class="shopping-cart-btn" aria-controls="shopping-cart">
+            <img src="./assets/shared/desktop/icon-cart.svg" alt="shopping cart">
+          </button>
+          <div class="shopping-cart">
+            <div>
+              <h4>CART (<span class="cart-counter">0</span>)</h4>
+              <button class="remove-all">Remove all</button>
+            </div>
+            <div class="cart-items">
+
+            </div>
+            <div>
+              <p>TOTAL</p>
+              <h4>$ <span class="total-price">0</span></h4>
+            </div>
+            <div>
+              <a href="./checkout.html" class="see-product">checkout</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end of header section -->
+    </div>
+  </div>
+  <!-- end of wrapper for header -->
+
+  <main class="container">
+
+    <!-- first section -->
+    <section class="full-product-showoff | mb-med">
+      <input class="return-link | mb-xsm" action="action" onclick="window.history.go(-1); return false;" type="submit"
+        value="Go back" />
+      <div class="checkout-container">
+        <!-- container for checkout form info -->
+        <div class="form-container">
+          <h2 class="checkout-title">checkout</h2>
+          <form action="" class="checkout-form">
+            <div>
+              <!-- billing details -->
+              <p class="checkout-section">billing details</p>
+              <div class="billing-details">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" placeholder="Alexei Ward" name="name" title="Name and surname" required
+                    pattern="[a-zA-Z a-zA-Z]{3,}">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" placeholder="alexei@mail.com" name="email" title="Full email address" required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                </div>
+                <div class="form-group">
+                  <label for="phone-number">Phone Number</label>
+                  <input type="tel" placeholder="+1 202-555-0136" name="phone-number"
+                    title="Number with starting digits 0 and 9, full length of 9 or 10 characters" required
+                    pattern="[0/9][0-9]{8,9}">
+                </div>
+              </div>
+              <!-- end of billing details -->
+              <!-- shipping info -->
+              <p class="checkout-section">shipping info</p>
+              <div class="shipping-info">
+                <div class="form-group">
+                  <label for="addres">Addres</label>
+                  <input type="text" placeholder="1137 Williams Avenue" name="address" title="Enter your addres"
+                    required>
+                </div>
+                <div class="visual-contain">
+                  <div class="form-group">
+                    <label for="zip">ZIP Code</label>
+                    <input type="tel" placeholder="10001" name="zip" title="5 digits needed" required
+                      pattern="[0-9]{5}">
+                  </div>
+                  <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" placeholder="New York" name="city" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="country">Country</label>
+                  <input type="text" placeholder="United States" name="country" required>
+                </div>
+              </div>
+              <!-- end of shipping info -->
+              <!-- payment details -->
+              <p class="checkout-section">payment details</p>
+              <div class="payment-details">
+                <div class="payment-details-grid">
+                  <label for="payment-method">Payment Method</label>
+                  <div class="payment-method">
+                    <div class="form-group radio-color">
+                      <input type="radio" name="payment-method" value="e-Money" class="cashOff" required>
+                      <label for="e-Money">e-Money</label>
+                    </div>
+                    <div class="form-group radio-color">
+                      <input type="radio" name="payment-method" value="cash" class="cashOn" required>
+                      <label for="cash">Cash on Delivery</label>
+                    </div>
+                  </div>
+                  <div class="visual-contain real">
+                    <div class="form-group">
+                      <label for="numb">e-Money Number</label>
+                      <input type="tel" placeholder="238521993" name="numb" title="9 digits needed" pattern="[0-9]{9}">
+                    </div>
+                    <div class="form-group">
+                      <label for="pin">e-Money PIN</label>
+                      <input type="text" placeholder="6891" name="pin" title="4 digits needed" pattern="[0-9]{4}">
+                    </div>
+                    <div style="display: none;">
+                      <img src="./assets/checkout/icon-cash-on-delivery.svg" alt="cash on delivery picked option">
+                      <p>The 'Cash on Delivery' option enables you to pay in cash when our delivery courier arrives at
+                        your residence. Just make sure your address is corrext so that your order will not be cancelled.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of payment details -->
+            </div>
+            <div class="summary">
+              <h3 class="summary-title">summary</h3>
+              <div class="cart-items">
+                <div class="cart-item">
+                  <img class="cart-item-img" src="./assets/cart/image-xx99-mark-two-headphones.jpg"
+                    alt="new headphones">
+                  <div class="cart-item-info">
+                    <h5>XX99MK II</h5>
+                    <p>$ 2,999</p>
+                  </div>
+                  <div class="cart-item-product-amount">
+                    <p>x<span class="cart-item-amount">1</span></p>
+                  </div>
+                </div>
+                <div class="cart-item">
+                  <img class="cart-item-img" src="./assets/cart/image-xx99-mark-two-headphones.jpg"
+                    alt="new headphones">
+                  <div class="cart-item-info">
+                    <h5>XX99MK II</h5>
+                    <p>$ 2,999</p>
+                  </div>
+                  <div class="cart-item-product-amount">
+                    <p>x<span class="cart-item-amount">1</span></p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p class="total-declaration">TOTAL</p>
+                <h4>$ <span class="total-price">5,396</span></h4>
+              </div>
+              <div>
+                <p class="total-declaration">SHIPPING</p>
+                <h4>$ <span class="total-price">5,396</span></h4>
+              </div>
+              <div>
+                <p class="total-declaration">VAT (INCLUDED)</p>
+                <h4>$ <span class="total-price">5,396</span></h4>
+              </div>
+              <div class="total-grand-declaration">
+                <p class="total-declaration">GRAND TOTAL</p>
+                <h4 style="color: var(--clr-primary-400)">$ <span class="grand-total-price">5,396</span></h4>
+              </div>
+              <div>
+                <button class="see-product final-to-pay">continue & pay</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- end of container for checkout form info -->
+
+      </div>
+    </section>
+    <!-- end of first section -->
+
+  </main>
+
+
+  <!-- footer -->
+  <footer class="bg-neutral-800 text-neutral-150">
+    <div class="primary-footer | container">
+      <div class="footer-nav | uppercase">
+        <a class="logo" href="./index.html">
+          <img src="./assets/shared/desktop/logo.svg" alt="website logo">
+        </a>
+        <nav class="primary-nav | fs-200 fw-700 uppercase">
+          <ul class="nav-appearance">
+            <li><a href="./index.html">home</a></li>
+            <li><a href="./headphones.html">headphones</a></li>
+            <li><a href="./speakers.html">speakers</a></li>
+            <li><a href="./earphones.html">earphones</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <p>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers
+          and sound specialists who are devoted to helping you get the most out of personal audio. Come and
+          visit our demo facility - we’re open 7 days a week.</p>
+        <p>Copyright 2021. All Rights Reserved</p>
+      </div>
+      <nav class="secondary-nav">
+        <ul class="nav-appearance">
+          <li><a href="https://hr-hr.facebook.com" target="_blank">
+              <img src="./assets/shared/desktop/icon-facebook.svg" alt="">
+            </a></li>
+          <li><a href="https://twitter.com" target="_blank">
+              <img src="./assets/shared/desktop/icon-twitter.svg" alt="">
+            </a></li>
+          <li><a href="https://www.instagram.com" target="_blank">
+              <img src="./assets/shared/desktop/icon-instagram.svg" alt="">
+            </a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <!-- end of footer -->
+
+  <script src="./js/main.js"></script>
+  <script src="./js/checkout.js"></script>
+</body>
+
+</html>

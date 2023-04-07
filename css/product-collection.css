@@ -1,0 +1,104 @@
+@import "./style.css";
+
+.mb-sm {
+  margin-bottom: 10rem;
+}
+.mb-med {
+  margin-bottom: 10rem;
+}
+.mb-item-first-part {
+  margin-bottom: 1.25rem;
+}
+.mb-item-second-part {
+  margin-bottom: 2.25rem;
+}
+.mb-item-third-part {
+  margin-bottom: 2.75rem;
+}
+
+@media (max-width: 60em) {
+  .mb-sm {
+    margin-bottom: 7.5rem;
+  }
+  .mb-med {
+    margin-bottom: 7.5rem;
+  }
+  .mb-item-third-part {
+    margin-bottom: 1.75rem;
+  }
+}
+
+@media (max-width: 40em) {
+  .mb-sm {
+    margin-bottom: 4rem;
+  }
+  .mb-item-first-part {
+    margin-bottom: 1.75rem;
+  }
+  .mb-item-second-part {
+    margin-bottom: 1.75rem;
+  }
+  .mb-item-third-part {
+    margin-bottom: 1.75rem;
+  }
+}
+
+/* Header */
+
+h2.collection-sub-header {
+  text-align: center;
+  letter-spacing: 3px;
+  padding-block: 3rem;
+}
+
+@media (min-width: 40em) {
+  h2.collection-sub-header {
+    padding-block: 5rem;
+  }
+}
+
+.product-info {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.product-info > .collection-sub-header {
+  line-height: 1.2;
+  max-width: 14ch;
+  margin-inline: auto;
+}
+
+.product-img {
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 40em) {
+  .product-info {
+    margin-top: 3.25rem;
+  }
+}
+
+@media (min-width: 60em) {
+  .product-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "item-img item-info";
+    gap: 7.75rem;
+    align-items: center;
+  }
+  .product-info {
+    margin: 0;
+    text-align: start;
+    max-width: 50ch;
+    grid-area: item-info;
+  }
+  .product-img {
+    grid-area: item-img;
+  }
+  main > :nth-child(2) .product-info {
+    grid-area: item-img;
+  }
+  .product-info > .collection-sub-header {
+    margin-inline: initial;
+  }
+}
