@@ -66,6 +66,7 @@
           <button class="shopping-cart-btn" aria-controls="shopping-cart">
             <img src="./assets/shared/desktop/icon-cart.svg" alt="shopping cart">
           </button>
+          <div class="cart-items-quantity">0</div>
           <div class="shopping-cart">
             <div>
               <h4>CART (<span class="cart-counter">0</span>)</h4>
@@ -184,45 +185,24 @@
             </div>
             <div class="summary">
               <h3 class="summary-title">summary</h3>
-              <div class="cart-items">
-                <div class="cart-item">
-                  <img class="cart-item-img" src="./assets/cart/image-xx99-mark-two-headphones.jpg"
-                    alt="new headphones">
-                  <div class="cart-item-info">
-                    <h5>XX99MK II</h5>
-                    <p>$ 2,999</p>
-                  </div>
-                  <div class="cart-item-product-amount">
-                    <p>x<span class="cart-item-amount">1</span></p>
-                  </div>
-                </div>
-                <div class="cart-item">
-                  <img class="cart-item-img" src="./assets/cart/image-xx99-mark-two-headphones.jpg"
-                    alt="new headphones">
-                  <div class="cart-item-info">
-                    <h5>XX99MK II</h5>
-                    <p>$ 2,999</p>
-                  </div>
-                  <div class="cart-item-product-amount">
-                    <p>x<span class="cart-item-amount">1</span></p>
-                  </div>
-                </div>
+              <div class="summary-cart-items">
+
               </div>
               <div>
                 <p class="total-declaration">TOTAL</p>
-                <h4>$ <span class="total-price">5,396</span></h4>
+                <h4>$ <span class="summary-total-price">0</span></h4>
               </div>
               <div>
                 <p class="total-declaration">SHIPPING</p>
-                <h4>$ <span class="total-price">5,396</span></h4>
+                <h4>$ <span class="summary-total-price">0</span></h4>
               </div>
               <div>
                 <p class="total-declaration">VAT (INCLUDED)</p>
-                <h4>$ <span class="total-price">5,396</span></h4>
+                <h4>$ <span class="summary-total-price">0</span></h4>
               </div>
               <div class="total-grand-declaration">
                 <p class="total-declaration">GRAND TOTAL</p>
-                <h4 style="color: var(--clr-primary-400)">$ <span class="grand-total-price">5,396</span></h4>
+                <h4 style="color: var(--clr-primary-400)">$ <span class="grand-total-price">0</span></h4>
               </div>
               <div>
                 <button class="see-product final-to-pay">continue & pay</button>
@@ -280,6 +260,7 @@
 
   <script src="./js/main.js"></script>
   <script src="./js/checkout.js"></script>
+  <script src="./js/shopping-cart.js"></script>
 </body>
 
 </html>

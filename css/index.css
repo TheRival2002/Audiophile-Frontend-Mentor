@@ -14,7 +14,7 @@
 .sub-header {
   text-align: center;
   padding-top: 6.5rem;
-  max-width: 45ch;
+  max-width: 48ch;
   margin-inline: auto;
 }
 
@@ -35,7 +35,7 @@
   .sub-header {
     text-align: start;
     margin-inline: initial;
-    padding-top: 3rem;
+    padding-top: 4rem;
   }
   .sub-header > p {
     margin-inline: initial;
@@ -48,6 +48,35 @@
 
 .sub-header > p:nth-of-type(2) {
   margin-bottom: 2rem;
+}
+
+.product-announcement {
+  animation: slideIn 1s ease;
+}
+
+.sub-header > *:not(:first-child) {
+  animation: fadeIn 2500ms ease 750ms;
+  animation-fill-mode: both;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(20rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Second section */

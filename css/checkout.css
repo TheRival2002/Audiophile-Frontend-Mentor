@@ -242,11 +242,11 @@ input[type="radio"] {
   margin-bottom: 1.5rem;
 }
 
-.cart-items {
+.summary-cart-items {
   margin-bottom: 2rem;
 }
 
-.cart-item:not(:first-of-type) {
+.summary-cart-item:not(:first-of-type) {
   margin-top: 1.5rem;
 }
 
@@ -265,7 +265,7 @@ input[type="radio"] {
   justify-content: space-between;
 }
 
-.cart-item-info {
+.summary-cart-item-info {
   width: 100%;
   justify-self: start;
   margin-left: 1rem;
@@ -275,6 +275,11 @@ input[type="radio"] {
   margin-top: 1rem;
   text-align: center;
   width: 100%;
+}
+
+.see-product:hover,
+.see-product:focus {
+  box-shadow: inset 25em 0 0 0 var(--clr-primary-300);
 }
 
 /* Styling the form */
