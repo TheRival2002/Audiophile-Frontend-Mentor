@@ -71,7 +71,8 @@ window.addEventListener("scroll", () => {
     }
   });
   const topOffset = window.pageYOffset;
-  if (topOffset > 100) {
+  if (topOffset > 150) {
     shoppingCart.removeAttribute("data-visible");
+    primaryNavSmall.removeAttribute("data-visible");
   }
 });
