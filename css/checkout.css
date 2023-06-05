@@ -282,6 +282,13 @@ input[type="radio"] {
   box-shadow: inset 25em 0 0 0 var(--clr-primary-300);
 }
 
+@media (max-width: 60em) {
+  .see-product:hover,
+  .see-product:focus {
+    box-shadow: inset 70em 0 0 0 var(--clr-primary-300);
+  }
+}
+
 /* Styling the form */
 
 .radio-color > input {

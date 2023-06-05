@@ -178,8 +178,19 @@
   .full-product-photography {
     flex-direction: row;
   }
+  .full-product-photography:has(:hover) .full-product-img {
+    transform: scale(0.95);
+  }
+  .full-product-photography:has(:hover) .full-product-img:hover {
+    transform: scale(1.05);
+    filter: brightness(110%);
+  }
   .full-product-photography > :last-child > .full-product-img {
     min-height: 100%;
+  }
+  .full-product-photography .full-product-img {
+    cursor: pointer;
+    transition: transform 450ms ease, filter 450ms ease;
   }
 }
 

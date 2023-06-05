@@ -380,6 +380,10 @@ h4 {
   .shop-link:focus {
     color: var(--clr-primary-400);
   }
+  .shop-link:hover .arrow-right,
+  .shop-link:focus .arrow-right {
+    animation: arrowFlip 350ms ease;
+  }
   .darker-style:hover,
   .darker-style:focus {
     box-shadow: inset 13em 0 0 0 var(--clr-neutral-400);
@@ -389,6 +393,18 @@ h4 {
     box-shadow: inset 13em 0 0 0 var(--clr-neutral-900);
     color: var(--clr-neutral-100);
     border: 1px solid var(--clr-neutral-900);
+  }
+}
+
+@keyframes arrowFlip {
+  0% {
+    transform: translate(0.1rem);
+  }
+  50% {
+    transform: translate(1rem);
+  }
+  100% {
+    transform: translate(0);
   }
 }
 
